@@ -1,0 +1,12 @@
+command: ['python', 'app.py']
+env:
+  # Bound by the installer from the resources declared in manifest.yaml.
+  - name: DATABRICKS_WAREHOUSE_ID
+    valueFrom: sql-warehouse
+  - name: DATABRICKS_VOLUME_FILES
+    valueFrom: files
+
+  # The table holding the AI function output to review: id STRING, response VARIANT.
+  # The two output objects are derived from it by name.
+  - name: INPUT_TABLE
+    value: 'catalog.schema.your_ai_function_output'

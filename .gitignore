@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+node_modules/
+frontend/dist/
+.DS_Store
+.databricks/
+.deploy/
+frontend/tsconfig.tsbuildinfo
+
+# Resolves through an internal npm mirror on the machine that generated it, so
+# it is not committed. Run `npm --prefix frontend install` to generate your own.
+frontend/package-lock.json
+frontend/tsconfig.tsbuildinfo
